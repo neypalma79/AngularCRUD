@@ -3,7 +3,7 @@ export interface Product {
   name: string;
   brand: string;
   description?: string;
-  unit_price: number;
+  unitPrice: number;
   quantity: number;
   status: string;
 }
