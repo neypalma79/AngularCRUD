@@ -1,0 +1,16 @@
+<div id="mainContainer">
+  <p>Nombre (*):</p>
+  <input type="text" pInputText [(ngModel)]="name" />
+  <p>Marca (*):</p>
+  <input type="text" pInputText [(ngModel)]="brand" />
+  <p>Descripción:</p>
+  <input type="text" pInputText [(ngModel)]="description" />
+  <p>Precio Unitario (*):</p>
+  <input type="text" pInputText [(ngModel)]="unitPrice" />
+  <p>Cantidad (*):</p>
+  <input type="text" pInputText [(ngModel)]="quantity" />
+</div>
+<div id="buttonContainer">
+  <p-button label="Guardar" (click)="saveProduct()"></p-button>
+</div>
+<p-toast></p-toast>

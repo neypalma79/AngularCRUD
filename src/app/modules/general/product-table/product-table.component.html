@@ -15,8 +15,9 @@
       <td>{{ product.name }}</td>
       <td>{{ product.brand }}</td>
       <td>{{ product.description }}</td>
-      <td>{{ product.unitPrice }}</td>
+      <td>{{ product.unitPrice | currency }}</td>
       <td>{{ product.quantity }}</td>
     </tr>
   </ng-template>
 </p-table>
+<p-toast></p-toast>

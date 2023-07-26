@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './modules/authorization/login/login.component';
 import { DashboardComponent } from './modules/general/dashboard/dashboard.component';
 import { ProductTableComponent } from './modules/general/product-table/product-table.component';
+import { ProductNewComponent } from './modules/general/product-new/product-new.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -10,7 +11,10 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    children: [{ path: 'products', component: ProductTableComponent }],
+    children: [
+      { path: 'list', component: ProductTableComponent },
+      { path: 'new', component: ProductNewComponent },
+    ],
   },
 ];
 

@@ -1,3 +1,10 @@
-<input type="text" pInputText [(ngModel)]="username" />
-<input type="password" pInputText [(ngModel)]="password" />
-<p-button label="Login" (click)="verificarLogin()"></p-button>
+<div id="mainContainer">
+  <p>Usuario:</p>
+  <input type="text" pInputText [(ngModel)]="username" />
+  <p>Clave:</p>
+  <input type="password" pInputText [(ngModel)]="password" />
+</div>
+<div id="buttonContainer">
+  <p-button label="Login" (click)="verificarLogin()"></p-button>
+</div>
+<p-toast></p-toast>
