@@ -28,7 +28,7 @@ export class ProductApiService {
   public saveProduct(product: Product): Observable<ProductResponse> {
     return this.httpClient.post<ProductResponse>(
       this.urlBase + this.pathProducts,
-      { body: product },
+      product,
       { headers: this.httpHeaders }
     );
   }
