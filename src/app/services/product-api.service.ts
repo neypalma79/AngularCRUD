@@ -32,4 +32,11 @@ export class ProductApiService {
       { headers: this.httpHeaders }
     );
   }
+
+  public deleteProduct(id: number): Observable<ProductResponse> {
+    return this.httpClient.delete<ProductResponse>(
+      `${this.urlBase}${this.pathProducts}/${id}`,
+      { headers: this.httpHeaders }
+    );
+  }
 }
