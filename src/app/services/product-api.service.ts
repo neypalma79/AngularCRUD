@@ -39,4 +39,19 @@ export class ProductApiService {
       { headers: this.httpHeaders }
     );
   }
+
+  public listProductById(id: number): Observable<ProductResponse> {
+    return this.httpClient.get<ProductResponse>(
+      `${this.urlBase}${this.pathProducts}/${id}`,
+      { headers: this.httpHeaders }
+    );
+  }
+
+  public updateProduct(product: Product): Observable<ProductResponse> {
+    return this.httpClient.put<ProductResponse>(
+      this.urlBase + this.pathProducts,
+      product,
+      { headers: this.httpHeaders }
+    );
+  }
 }

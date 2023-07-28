@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { User } from 'src/app/models/user.interface';
 import { UserApiService } from 'src/app/services/user-api.service';
 import { MessageService } from 'primeng/api';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -34,6 +33,7 @@ export class LoginComponent {
         if (this.user.status !== undefined) {
           if (this.user.status === 'A') {
             console.info('Login autorizado');
+            localStorage.setItem('sessionInit', 'true');
             this.router.navigateByUrl('dashboard');
           } else {
             console.info('Login no autorizado');

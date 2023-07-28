@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularCRUD';
+
+  constructor() {
+    setInterval(this.verificarSesion, 10000);
+  }
+
+  public verificarSesion(): void {
+    // verificar sesion activa en bd
+    console.info('Verificando sesion...');
+  }
 }

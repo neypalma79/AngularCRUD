@@ -1,1 +1,29 @@
-<p>product-update works!</p>
+<div id="mainContainer">
+  <p>Id de producto:</p>
+  <input type="text" pInputText [(ngModel)]="id" />
+</div>
+<div id="buttonContainer">
+  <p-button label="Buscar" (click)="findProductById()"></p-button>
+</div>
+
+<ng-container *ngIf="updateData">
+  <div id="mainContainer">
+    <p>Nombre (*):</p>
+    <input type="text" pInputText [(ngModel)]="product.name" />
+    <p>Marca (*):</p>
+    <input type="text" pInputText [(ngModel)]="product.brand" />
+    <p>Descripción:</p>
+    <input type="text" pInputText [(ngModel)]="product.description" />
+    <p>Precio Unitario (*):</p>
+    <input type="text" pInputText [(ngModel)]="product.unitPrice" />
+    <p>Cantidad (*):</p>
+    <input type="text" pInputText [(ngModel)]="product.quantity" />
+    <p>Status (*):</p>
+    <input type="text" pInputText [(ngModel)]="product.status" />
+  </div>
+  <div id="buttonContainer">
+    <p-button label="Actualizar" (click)="updateProduct()"></p-button>
+  </div>
+</ng-container>
+
+<p-toast></p-toast>
