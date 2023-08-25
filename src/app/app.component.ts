@@ -1,15 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass'],
 })
-export class AppComponent {
-  title = 'AngularCRUD';
+export class AppComponent implements OnDestroy {
+  title: string = 'AngularCRUD';
+  interval: any;
 
   constructor() {
-    setInterval(this.verificarSesion, 10000);
+    this.interval = setInterval(this.verificarSesion, 10000);
+  }
+
+  ngOnDestroy(): void {
+    this.interval.clearInterval();
   }
 
   public verificarSesion(): void {
