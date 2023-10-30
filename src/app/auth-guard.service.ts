@@ -6,6 +6,7 @@ import {
   Router,
 } from '@angular/router';
 
+export
 @Injectable({
   providedIn: 'root',
 })
